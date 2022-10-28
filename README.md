@@ -32,4 +32,5 @@ Dette repoet tar utgangspunk i to ting:
 * Gi det repoet et navn. For.eks `Learning git`
 * Pass på at `Initialize this repository with a README` IKKE er huket av.
 
+## Skritt 1: Sette opp github repoet på PC-en.
 
