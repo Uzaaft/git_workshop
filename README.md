@@ -70,7 +70,7 @@ Når man bruker git, og eventuelle nettsider for å håndtere Git([Github](www.g
 ```mermaid
 %%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'rotateCommitLabel': true}} }%%
 gitGraph
-  commit id: "feat(fe): Form validation"
+  commit id: "feat(fe): Add form"
   commit id: "fix(fe): Fix email validation"
   commit id: "feat(fe): Aditional customer inputs"
   branch dev_be
