@@ -70,16 +70,15 @@ Når man bruker git, og eventuelle nettsider for å håndtere Git([Github](www.g
 ```mermaid
 %%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'rotateCommitLabel': true}} }%%
 gitGraph
-  commit id: "feat(fe): Add form validation"
-  commit id: "fix(fe): Fix bug when validating emails"
-  commit id: "feat(fe): Add aditional customer inputs"
+  commit id: "feat(fe): Form validation"
+  commit id: "fix(fe): Fix email validation"
+  commit id: "feat(fe): Aditional customer inputs"
   branch dev_be
-  commit id: "feat(): ..."
-  commit id: "fix(client): ..."
-  commit id: "chore"
-  checkout main
-  commit id: "fix(be): Fix issue with empty inputs from fe"
-  commit id: "ci: Add testing for backend"
-  branch dev_fe_fix
+  commit id: "feat(be): Add physics engine for gas sims"
+  commit id: "fix(be): Fix convertions of SI units"
+  commit id: "chore(be): Format project"
+  commit id: "fix(be): Handle empty inputs from fe"
+  branch dev_fe_ci
+  commit id: "ci: Add testing for fe"
   commit
 ```
