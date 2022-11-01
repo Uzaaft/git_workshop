@@ -43,7 +43,7 @@ git config --global user.name "your name"
 git config --global user.email "your.name@domain.com"
 ```
 
-For.eks så bruker jeg(@uzaaft):
+For.eks så bruker jeg([uzaaft](https://github.com/Uzaaft)):
 
 ```
 git config --global user.name "uzaaft"
@@ -168,3 +168,78 @@ For å sende endringene opp til github, kjør:
 ```
 git push
 ```
+
+## Skritt 4.9:
+
+Gjerne gjør et par endringer, og commit på nytt. 🤓
+
+## Skritt 5: Git og Github
+
+Nå som vi jobba litt med basic git commandoer, la oss jobbe med et faktis repo!
+
+Først, la oss forke repoet som du ser på. Når vi forker, så lager vi en egen kopi av et repo.
+Først, gå helt opp, og trykk på fork knappen. 
+![](images/hvordan_fork.png)
+I neste skjerm, pass på at knappen `Copy the main branch only` ikke er huket av. Dette gjelder kun for dette repoet her. Hver eneste gang man forker er litt unik, så bruk hodet neste gang dere forker. 🤓
+![](images/ta_med_branches.png)
+
+Kopier linken til repoet ved å trykke på den grønne knappen(se bildet under). I vinduet som popper frem, pass på at dere har valgt ssh linken(se bildet under).
+![](images/ssh_url.png)
+Klikk på ikonet ved siden av linken. Du har nå kopiert linken til repoet. 
+
+Gå inn på vscode, og trykk på `Clone Git Repository...`
+![](images/vscode_intro_side.png)
+
+Lim inn linken til repoet. VSCode vil nå åpne opp et vindu med din fork av dette repoet her. 🤯
+
+## Skritt 6: Branches
+Vi skal nå jobbe med grener.
+Hva er en git gren?
+En gren er en linje av commits. Hver eneste commit har en forrige commit, og en neste commit. Hvis vi ser på et repo som en graf, så er en gren en linje av commits. Hensikten med en branch er å kunne jobbe med ulike versjoner av koden samtidig. Hvis vi for eksempel skal jobbe med en ny feature, så kan vi jobbe med denne featuren i en egen gren, uten å påvirke noe annet. Når featuren er ferdig, kan vi merge inn featuren i master branchen.  
+Oisann, der kom et nytt ord. Hva er en merge?
+
+En merge er når vi tar en gren, og legger den inn i en annen gren. Når vi merger en gren inn i en annen gren, så vil alle commitsene i den første grenen bli lagt til i den andre grenen.  
+
+Se diagrammet under for en illustrasjon av dette.
+```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'rotateCommitLabel': true}} }%%
+gitGraph
+  commit id: "feat: ...."
+  commit id: "fix(fe): ..."
+  commit id: "feat(fe): ..."
+  branch fix_navn
+  commit id: "fix: ...."
+  checkout main
+  merge fix_navn
+```
+
+La oss nå gjøre det diagrammet viser.
+
+
+## Skritt 7: Lag en branch
+For å lage en branch, og bytte over til den branchen, kjør kommandoen:
+
+```
+git checkout -b fix_navn
+```
+ Deretter, må vi korrigere linja under.
+
+ ```python
+ name = eik
+```
+Bytt ut eik med navnet ditt.
+
+For å bytte tilbake til original branchen vår, kjør:
+```
+git checkout main
+```
+Se på linjen du endra på. Ser du at vi nå er tilbake til det gamle navnet? La oss fikse dette også i main branchen!
+Men først, commit, og push endringene dine til github.
+
+## Skritt 8: Merging
+La oss nå merge endringene fra skritt 7 inn i `main` branchen.
+Kjør:
+```
+git merge <NAVNET_PÅ_BRANCHEN_DU_VIL_MERGE
+```
+Hva skjer når du kjører denne kommandoen?
