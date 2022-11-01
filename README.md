@@ -43,7 +43,7 @@ git config --global user.name "your name"
 git config --global user.email "your.name@domain.com"
 ```
 
-For.eks så bruker jeg(@uzaft):
+For.eks så bruker jeg(@uzaaft):
 
 ```
 git config --global user.name "uzaaft"
