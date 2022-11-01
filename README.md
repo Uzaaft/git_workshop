@@ -264,17 +264,26 @@ Trykk på `New pull request` knappen.
 Først, så må du felge riktig branches for pull requesten.
  HUSK: Vi vil merge fix_navn inn i main
 
+ Deretter trykk på Create pull request.
+
+
+
 Her kan du skrive en melding om hva du har gjort. I tillegg, kan du se hvilke commits som er med i denne pull requesten. Hvis du trykker på `Files changed`, så kan du se hvilke filer som er endret i denne pull requesten. 
+
+![](images/pull_request_text.png)
 
 Når du er ferdig, trykk på `Create pull request` knappen. Du vil nå se en side som ser slik ut:
 ![](images/created_pull_request.png)
 
 Her kan du se at pull requesten din er laget. Her kan du også se hvilke commits som er med i denne pull requesten. Du kan også se hvilke filer som er endret i denne pull requesten. 
 
-Du kan også se at det er en knapp som heter `Merge pull request`. Trykk på denne knappen. Du vil nå se en side som ser slik ut:
-![](images/merge_pull_request.png)
+Du kan også se at det er en knapp som heter `Merge pull request`. Trykk på denne knappen. Hva skjer nå?
 
-Her kan du se at du er i ferd med å merge pull requesten din. Når du er ferdig, trykk på `Confirm merge` knappen. Du vil nå se en side som ser slik ut:
+ Når du er ferdig, trykk på `Confirm merge` knappen. Du vil nå se en side som ser slik ut:
 ![](images/merged_pull_request.png)
 
-Her kan du se at pull requesten din er merget. Du vil også se at den er merget i master branchen. 
+Her kan du se at pull requesten din er merget. Du vil også se at den er merget i main branchen. Du kan nå slette branchen din.
+
+
+# Skritt 10: [Merge conflicts](https://www.youtube.com/watch?v=cphNpqKpKc4)
+
