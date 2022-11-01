@@ -242,4 +242,39 @@ Kjør:
 ```
 git merge <NAVNET_PÅ_BRANCHEN_DU_VIL_MERGE
 ```
-Hva skjer når du kjører denne kommandoen?
+Hva skjer når du kjører denne kommandoen? Prøv å tolk det du får opp i terminalen. Sjekk også 
+```
+git log 
+```
+
+Så er det bare å pushe endringene til Github 🤓.
+
+## Skritt 9: Pull requests
+Det finnes flere måter å merge på. I skritt 8 så brukte vi `merge` kommandoen til å merge. Men Github har også en måte å merge gjennom nettsiden,og det er gjennom `pull requests`. 
+Når vi lager en pull request, så lager vi en forespørsel om å merge en branch inn i en annen branch. Det er veldig vanlig å bruke pull requests i selskaper. Dette er fordi det blir enklere å se endringene som er gjort, og det blir enklere å diskutere endringene som er gjort. Så la oss nå teste ut Pull requests i Github:
+
+![](images/pull_request.png)
+
+Trykk på `New pull request` knappen.
+
+
+![](images/new_pull_request_knapp.png)
+ Du vil nå se en side som ser slik ut:
+![](images/new_pull_request_page.png)
+Først, så må du felge riktig branches for pull requesten.
+ HUSK: Vi vil merge fix_navn inn i main
+
+Her kan du skrive en melding om hva du har gjort. I tillegg, kan du se hvilke commits som er med i denne pull requesten. Hvis du trykker på `Files changed`, så kan du se hvilke filer som er endret i denne pull requesten. 
+
+Når du er ferdig, trykk på `Create pull request` knappen. Du vil nå se en side som ser slik ut:
+![](images/created_pull_request.png)
+
+Her kan du se at pull requesten din er laget. Her kan du også se hvilke commits som er med i denne pull requesten. Du kan også se hvilke filer som er endret i denne pull requesten. 
+
+Du kan også se at det er en knapp som heter `Merge pull request`. Trykk på denne knappen. Du vil nå se en side som ser slik ut:
+![](images/merge_pull_request.png)
+
+Her kan du se at du er i ferd med å merge pull requesten din. Når du er ferdig, trykk på `Confirm merge` knappen. Du vil nå se en side som ser slik ut:
+![](images/merged_pull_request.png)
+
+Her kan du se at pull requesten din er merget. Du vil også se at den er merget i master branchen. 
