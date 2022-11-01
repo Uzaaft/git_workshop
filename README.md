@@ -225,7 +225,7 @@ git checkout -b fix_navn
  Deretter, må vi korrigere linja under.
 
  ```python
- name = uzair
+ name = eik
 ```
 Bytt ut eik med navnet ditt.
 
