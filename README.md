@@ -35,6 +35,21 @@ Dette repoet tar utgangspunk i to ting:
     </details>
   - For å sette opp git, følg denne guiden her: https://docs.github.com/en/authentication/connecting-to-github-with-ssh
 
+* Sett opp en git identitet:
+  Kjør commandoene:
+
+```
+git config --global user.name "your name"
+git config --global user.email "your.name@domain.com"
+```
+
+For.eks så bruker jeg(@uzaft):
+
+```
+git config --global user.name "uzaaft"
+git config --global user.email "muaf@nmbu.no"
+```
+
 ## Skritt 0: Lag en [github](https://github.com) bruker
 
 - Gå til [Github](https://github.com).
