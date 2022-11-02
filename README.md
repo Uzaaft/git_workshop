@@ -26,6 +26,14 @@ Dette repoet tar utgangspunk i to ting:
 1. At du har git installert på PC-en. Du kan installere det [herifra](https://git-scm.com)
 2. At du har [VSCode] installert på pcen. Du kan installere det [herifra](https://code.visualstudio.com)
 
+
+## Skritt -∞
+### Hvorfor skal jeg bry meg om git?
+Git er bransje standard når det kommer til å holde styr over kode, 
+jobbe sammen med kode. Om man jobber med datavitenskap, bioinformatikk, cybersecurity, eller kun med kode, så er man bort i git.
+Men git er så mye mer enn kun for kode. For.eks er det en fin måte å bygge en CV på 
+hvis man jobber med hardware design, 3D design, osv osv. 
+
 ## Skritt -1: Sette opp git!
 
 - Først, sett opp en SSH nøkkel for git.
@@ -50,7 +58,7 @@ git config --global user.name "uzaaft"
 git config --global user.email "muaf@nmbu.no"
 ```
 
-## Skritt 0: Lag en [github](https://github.com) bruker
+## Skritt 0: Lag en [github](https://github.com) bruker, og et repo
 
 - Gå til [Github](https://github.com).
 - Lag en bruker og log inn på github. Vi anbefaler dere å bruke NMBU mailen! Da får dere goodies fra github(gratis kurs, etc)
@@ -287,3 +295,50 @@ Her kan du se at pull requesten din er merget. Du vil også se at den er merget 
 
 # Skritt 10: [Merge conflicts](https://www.youtube.com/watch?v=cphNpqKpKc4)
 
+En hver programmerers frykt( hint hint: Neste års halloween kostyme ide)
+En merge conflict er når du har endringer på samme linje av en fil, i to forskjellige branches. 
+Forvirret? Det var jeg og!
+La oss se på et praktisk eksempel.
+I listen over branches, kan du se to branches, `merge_conflict_1` og `merge_conflict_2`.
+![](images/hvor_er_branches.png)
+
+De branchene ser slik ut:
+
+```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'rotateCommitLabel': true}} }%%
+gitGraph
+  commit id: "fix: fix name"
+  commit id: "feat: further work in skritt 8 and 9"
+  commit id: "fix: Add images for skritt 8"
+  commit id: "Merge branch 'main' into fix_navn"
+  commit id: "Merge pull request #1 from Uzaaft/fix_navn"
+  commit id: "feat: finish skritt 9, start skritt 10, and add images"
+  commit id: "Merge branch 'main' of github.com:Uzaaft/git_workshop"
+  commit id: "fix: Add missing images"
+  branch merge_conflict_1
+  commit id: "feat: Add merge conflict file"
+  branch merge_conflict_2
+  checkout merge_conflict_1
+  commit id: "feat: Append text to merge.txt"
+  checkout merge_conflict_2
+  commit id: "feat: Fix file for merge_conflict_2 to cause a conflict"
+```
+
+# BONUS
+## La oss lage oss pimpe opp profilen vår på github:
+Github kan bli brukt som en CV for utviklere, og designere. 
+
+Du kan legge ut eksempel prosjekter med kode, designprosjekter, og folk kan se hvor aktiv du er. 
+For.eks: 
+
+Her har vi brukeren min:
+![](images/uzaaft_profil.png)
+Fra denne kan vi finne ut av:
+  - Hvilke språk liker han?
+  - Hvilke verktøy kan han bruke?
+  - Hvilke organisasjoner er han med i?
+  - Hvor aktiv er han?(pekepinne)
+
+
+[Inspirasjon for profiler](https://github.com/matiassingers/awesome-readme)  
+[Fint startspunkt](https://github.com/othneildrew/Best-README-Template)
