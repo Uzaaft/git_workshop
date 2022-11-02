@@ -27,7 +27,7 @@ Dette repoet tar utgangspunk i to ting:
 2. At du har [VSCode] installert på pcen. Du kan installere det [herifra](https://code.visualstudio.com)
 
 
-## Skritt -$\infin$
+## Skritt -$ \infty $
 ### Hvorfor skal jeg bry meg om git?
 Git er bransje standard når det kommer til å holde styr over kode, 
 jobbe sammen med kode. Om man jobber med datavitenskap, bioinformatikk, cybersecurity, eller kun med kode, så er man bort i git.
