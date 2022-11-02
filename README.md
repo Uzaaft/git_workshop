@@ -245,7 +245,7 @@ git checkout -b fix_navn
 Deretter, må vi korrigere linja under.
 
 ```python
-name = eik
+name = Lars
 ```
 
 Bytt ut eik med navnet ditt.
