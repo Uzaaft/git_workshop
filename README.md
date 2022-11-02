@@ -24,15 +24,16 @@ For.eks er hensikten med mergepractice1 og mergepractice2 å gi dere erfaring me
 Dette repoet tar utgangspunk i to ting:
 
 1. At du har git installert på PC-en. Du kan installere det [herifra](https://git-scm.com)
-2. At du har [VSCode] installert på pcen. Du kan installere det [herifra](https://code.visualstudio.com)
-
+2. At du har [VSCode](https://code.visualstudio.com) installert på pcen. Du kan installere det [herifra](https://code.visualstudio.com)
 
 ## Skritt -∞
+
 ### Hvorfor skal jeg bry meg om git?
-Git er bransje standard når det kommer til å holde styr over kode, 
+
+Git er bransje standard når det kommer til å holde styr over kode,
 jobbe sammen med kode. Om man jobber med datavitenskap, bioinformatikk, cybersecurity, eller kun med kode, så er man bort i git.
-Men git er så mye mer enn kun for kode. For.eks er det en fin måte å bygge en CV på 
-hvis man jobber med hardware design, 3D design, osv osv. 
+Men git er så mye mer enn kun for kode. For.eks er det en fin måte å bygge en CV på
+hvis man jobber med hardware design, 3D design, og programmering.
 
 ## Skritt -1: Sette opp git!
 
@@ -57,6 +58,14 @@ For.eks så bruker jeg([uzaaft](https://github.com/Uzaaft)):
 git config --global user.name "uzaaft"
 git config --global user.email "muaf@nmbu.no"
 ```
+
+For å dobbeltsjekke om alt funker, kjør:
+
+```
+ssh -T git@github.com
+```
+
+Får du en hilsen tilbake? Hvis du får en hilsen, kan du fortsette videre. Ellers, så må du dobbeltsjekke om du har satt opp ssh nøkkelen din riktig.
 
 ## Skritt 0: Lag en [github](https://github.com) bruker, og et repo
 
@@ -186,14 +195,14 @@ Gjerne gjør et par endringer, og commit på nytt. 🤓
 Nå som vi jobba litt med basic git commandoer, la oss jobbe med et faktis repo!
 
 Først, la oss forke repoet som du ser på. Når vi forker, så lager vi en egen kopi av et repo.
-Først, gå helt opp, og trykk på fork knappen. 
+Først, gå helt opp, og trykk på fork knappen.
 ![](images/hvordan_fork.png)
 I neste skjerm, pass på at knappen `Copy the main branch only` ikke er huket av. Dette gjelder kun for dette repoet her. Hver eneste gang man forker er litt unik, så bruk hodet neste gang dere forker. 🤓
 ![](images/ta_med_branches.png)
 
 Kopier linken til repoet ved å trykke på den grønne knappen(se bildet under). I vinduet som popper frem, pass på at dere har valgt ssh linken(se bildet under).
 ![](images/ssh_url.png)
-Klikk på ikonet ved siden av linken. Du har nå kopiert linken til repoet. 
+Klikk på ikonet ved siden av linken. Du har nå kopiert linken til repoet.
 
 Gå inn på vscode, og trykk på `Clone Git Repository...`
 ![](images/vscode_intro_side.png)
@@ -201,14 +210,16 @@ Gå inn på vscode, og trykk på `Clone Git Repository...`
 Lim inn linken til repoet. VSCode vil nå åpne opp et vindu med din fork av dette repoet her. 🤯
 
 ## Skritt 6: Branches
+
 Vi skal nå jobbe med grener.
 Hva er en git gren?
 En gren er en linje av commits. Hver eneste commit har en forrige commit, og en neste commit. Hvis vi ser på et repo som en graf, så er en gren en linje av commits. Hensikten med en branch er å kunne jobbe med ulike versjoner av koden samtidig. Hvis vi for eksempel skal jobbe med en ny feature, så kan vi jobbe med denne featuren i en egen gren, uten å påvirke noe annet. Når featuren er ferdig, kan vi merge inn featuren i master branchen.  
 Oisann, der kom et nytt ord. Hva er en merge?
 
-En merge er når vi tar en gren, og legger den inn i en annen gren. Når vi merger en gren inn i en annen gren, så vil alle commitsene i den første grenen bli lagt til i den andre grenen.  
+En merge er når vi tar en gren, og legger den inn i en annen gren. Når vi merger en gren inn i en annen gren, så vil alle commitsene i den første grenen bli lagt til i den andre grenen.
 
 Se diagrammet under for en illustrasjon av dette.
+
 ```mermaid
 %%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'rotateCommitLabel': true}} }%%
 gitGraph
@@ -223,80 +234,85 @@ gitGraph
 
 La oss nå gjøre det diagrammet viser.
 
-
 ## Skritt 7: Lag en branch
+
 For å lage en branch, og bytte over til den branchen, kjør kommandoen:
 
 ```
 git checkout -b fix_navn
 ```
- Deretter, må vi korrigere linja under.
 
- ```python
- name = eik
+Deretter, må vi korrigere linja under.
+
+```python
+name = eik
 ```
+
 Bytt ut eik med navnet ditt.
 
 For å bytte tilbake til original branchen vår, kjør:
+
 ```
 git checkout main
 ```
+
 Se på linjen du endra på. Ser du at vi nå er tilbake til det gamle navnet? La oss fikse dette også i main branchen!
 Men først, commit, og push endringene dine til github.
 
 ## Skritt 8: Merging
+
 La oss nå merge endringene fra skritt 7 inn i `main` branchen.
 Kjør:
+
 ```
 git merge <NAVNET_PÅ_BRANCHEN_DU_VIL_MERGE
 ```
-Hva skjer når du kjører denne kommandoen? Prøv å tolk det du får opp i terminalen. Sjekk også 
+
+Hva skjer når du kjører denne kommandoen? Prøv å tolk det du får opp i terminalen. Sjekk også
+
 ```
-git log 
+git log
 ```
 
 Så er det bare å pushe endringene til Github 🤓.
 
 ## Skritt 9: Pull requests
-Det finnes flere måter å merge på. I skritt 8 så brukte vi `merge` kommandoen til å merge. Men Github har også en måte å merge gjennom nettsiden,og det er gjennom `pull requests`. 
+
+Det finnes flere måter å merge på. I skritt 8 så brukte vi `merge` kommandoen til å merge. Men Github har også en måte å merge gjennom nettsiden,og det er gjennom `pull requests`.
 Når vi lager en pull request, så lager vi en forespørsel om å merge en branch inn i en annen branch. Det er veldig vanlig å bruke pull requests i selskaper. Dette er fordi det blir enklere å se endringene som er gjort, og det blir enklere å diskutere endringene som er gjort. Så la oss nå teste ut Pull requests i Github:
 
 ![](images/pull_request.png)
 
 Trykk på `New pull request` knappen.
 
-
 ![](images/new_pull_request_knapp.png)
- Du vil nå se en side som ser slik ut:
+Du vil nå se en side som ser slik ut:
 ![](images/new_pull_request_page.png)
 Først, så må du felge riktig branches for pull requesten.
- HUSK: Vi vil merge fix_navn inn i main
+HUSK: Vi vil merge fix_navn inn i main
 
- Deretter trykk på Create pull request.
+Deretter trykk på Create pull request.
 
-
-
-Her kan du skrive en melding om hva du har gjort. I tillegg, kan du se hvilke commits som er med i denne pull requesten. Hvis du trykker på `Files changed`, så kan du se hvilke filer som er endret i denne pull requesten. 
+Her kan du skrive en melding om hva du har gjort. I tillegg, kan du se hvilke commits som er med i denne pull requesten. Hvis du trykker på `Files changed`, så kan du se hvilke filer som er endret i denne pull requesten.
 
 ![](images/pull_request_text.png)
 
 Når du er ferdig, trykk på `Create pull request` knappen. Du vil nå se en side som ser slik ut:
 ![](images/created_pull_request.png)
 
-Her kan du se at pull requesten din er laget. Her kan du også se hvilke commits som er med i denne pull requesten. Du kan også se hvilke filer som er endret i denne pull requesten. 
+Her kan du se at pull requesten din er laget. Her kan du også se hvilke commits som er med i denne pull requesten. Du kan også se hvilke filer som er endret i denne pull requesten.
 
 Du kan også se at det er en knapp som heter `Merge pull request`. Trykk på denne knappen. Hva skjer nå?
 
- Når du er ferdig, trykk på `Confirm merge` knappen. Du vil nå se en side som ser slik ut:
+Når du er ferdig, trykk på `Confirm merge` knappen. Du vil nå se en side som ser slik ut:
 ![](images/merged_pull_request.png)
 
 Her kan du se at pull requesten din er merget. Du vil også se at den er merget i main branchen. Du kan nå slette branchen din.
 
-
 # Skritt 10: [Merge conflicts](https://www.youtube.com/watch?v=cphNpqKpKc4)
 
 En hver programmerers frykt( hint hint: Neste års halloween kostyme ide)
-En merge conflict er når du har endringer på samme linje av en fil, i to forskjellige branches. 
+En merge conflict er når du har endringer på samme linje av en fil, i to forskjellige branches.
 Forvirret? Det var jeg og!
 La oss se på et praktisk eksempel.
 I listen over branches, kan du se to branches, `merge_conflict_1` og `merge_conflict_2`.
@@ -325,20 +341,22 @@ gitGraph
 ```
 
 # BONUS
-## La oss lage oss pimpe opp profilen vår på github:
-Github kan bli brukt som en CV for utviklere, og designere. 
 
-Du kan legge ut eksempel prosjekter med kode, designprosjekter, og folk kan se hvor aktiv du er. 
-For.eks: 
+## La oss lage oss pimpe opp profilen vår på github:
+
+Github kan bli brukt som en CV for utviklere, og designere.
+
+Du kan legge ut eksempel prosjekter med kode, designprosjekter, og folk kan se hvor aktiv du er.
+For.eks:
 
 Her har vi brukeren min:
 ![](images/uzaaft_profil.png)
 Fra denne kan vi finne ut av:
-  - Hvilke språk liker han?
-  - Hvilke verktøy kan han bruke?
-  - Hvilke organisasjoner er han med i?
-  - Hvor aktiv er han?(pekepinne)
 
+- Hvilke språk liker han?
+- Hvilke verktøy kan han bruke?
+- Hvilke organisasjoner er han med i?
+- Hvor aktiv er han?(pekepinne)
 
 [Inspirasjon for profiler](https://github.com/matiassingers/awesome-readme)  
 [Fint startspunkt](https://github.com/othneildrew/Best-README-Template)
